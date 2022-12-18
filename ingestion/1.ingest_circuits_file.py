@@ -101,12 +101,16 @@ display(circuits_final_df)
 
 # COMMAND ----------
 
-circuits_final_df.write.mode("overwrite").format("delta").option("path","abfss://processed@externaltableseyon.dfs.core.windows.net/circuits").saveAsTable("circuits_um")
+circuits_final_df.write.mode("overwrite").format("delta").option("path","abfss://processed@externaltableseyon.dfs.core.windows.net/circuits").saveAsTable("circuits_ext")
 
 # COMMAND ----------
 
 # MAGIC %sql
 # MAGIC DESCRIBE TABLE extended circuits_um;
+
+# COMMAND ----------
+
+spark.sql("drop table circuits_um")
 
 # COMMAND ----------
 
