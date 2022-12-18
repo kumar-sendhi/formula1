@@ -48,3 +48,14 @@ spark.sql("""
   GRANT CREATE TABLE, CREATE VIEW, USE SCHEMA
   ON SCHEMA processed
   TO `formula1_developers`""")
+
+# COMMAND ----------
+
+spark.sql("""
+  CREATE SCHEMA IF NOT EXISTS presentation
+  COMMENT 'A new Unity Catalog schema called presentation'""")
+
+# COMMAND ----------
+
+# Describe the schema.
+display(spark.sql("DESCRIBE SCHEMA EXTENDED presentation"))
