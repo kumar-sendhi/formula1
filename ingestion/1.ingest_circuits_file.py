@@ -106,7 +106,7 @@ circuits_final_df.write.mode("overwrite").format("delta").option("path","abfss:/
 # COMMAND ----------
 
 # MAGIC %sql
-# MAGIC DESCRIBE TABLE extended circuits_um;
+# MAGIC DESCRIBE TABLE extended circuits_ext;
 
 # COMMAND ----------
 
