@@ -122,10 +122,6 @@ final_df.write.mode("overwrite").format("delta").option("path",f'{presentation_f
 
 # COMMAND ----------
 
-presentation_folder_path
-
-# COMMAND ----------
-
 # MAGIC %sql
 # MAGIC DESCRIBE TABLE extended race_results_ext;
 
