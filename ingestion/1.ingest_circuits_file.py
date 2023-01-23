@@ -110,20 +110,15 @@ circuits_final_df.write.mode("overwrite").format("delta").option("path","abfss:/
 
 # COMMAND ----------
 
-spark.sql("drop table circuits_um")
+#spark.sql("drop table circuits_um")
 
 # COMMAND ----------
 
-circuits_final_df.write.mode("overwrite").format("delta").saveAsTable("circuits")
+#circuits_final_df.write.mode("overwrite").format("delta").saveAsTable("circuits")
 
 # COMMAND ----------
 
-# MAGIC %sql
-# MAGIC DESCRIBE TABLE extended circuits;
-
-# COMMAND ----------
-
-spark.sql("drop table if exists circuits")
+#spark.sql("drop table if exists circuits")
 
 # COMMAND ----------
 
